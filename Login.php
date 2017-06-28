@@ -49,7 +49,7 @@
 				die(json_encode($response));
         	} else {
         		if($row > 0){
-					$update = mysqli_query($con,"UPDATE tb_users SET last_login ='$last' where username='$user' ");
+					$update = mysqli_query($con,"UPDATE tb_users SET last_login ='$last' where email='$email' ");
     				$response["CODE"] = 100;
     				$response["DESC"] = "Login successful!";
     				$data = array(
