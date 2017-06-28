@@ -1,6 +1,6 @@
 <?php
 $dbhost = "localhost"; 
-$dbuname = "root";
+$dbuname = "smpf4241_spn";
 $dbpass = "r3mb353l1t3";
 $dbname = "smpf4241_spn";
 

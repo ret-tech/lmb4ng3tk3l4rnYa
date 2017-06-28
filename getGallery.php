@@ -16,7 +16,7 @@
 		$response["DATA"] = $json;
 		die(json_encode($response));
     } else {
-        $result = mysqli_query($con,"SELECT * FROM tb_berita");
+        $result = mysqli_query($con,"SELECT * FROM tb_gallery");
 			$response["CODE"] = "100";
 			$response["DESC"] = "-";
     		$response["DATA"] = array();
