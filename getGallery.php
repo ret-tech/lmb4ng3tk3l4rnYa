@@ -25,13 +25,9 @@
 				$data= array();
         		$data["ID"] = $row["id"];
         		$data["JUDUL"] = $row["judul"];
-        		$data["BODY"] = $row["body"];
-        		$data["TIPE"] = $row["tipe"];
         		$data["GAMBAR"] = $row["gambar"];
-        		$data["STATUS"] = $row["status"];
-        		$data["DIBUAT"] = $row["dibuat"];
-        		$data["UBAH"] = $row["ubah"];
-				$data["id_user"] = $row["id_user"];
+        		$data["DESKRIPSI"] = $row["deskripsi"];
+        		$data["TAG"] = $row["tag"];
         		
         		array_push($response["DATA"], $data);
 			} echo json_encode($response);

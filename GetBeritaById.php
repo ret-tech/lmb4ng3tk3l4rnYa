@@ -4,19 +4,21 @@
 
     $value = json_decode(file_get_contents('php://input'),true);
     $id = $value["id"];
-    
-    if (mysqli_connect_error()){
-    	$response["CODE"] = "104";
-		$response["DESC"] = "Database Error!";
-		$data = array(
-			"ID" => "-"
-			);
+	
+	
+if ($id==''){
+    	$response["CODE"] = "102";
+		$response["DESC"] = "Parameter tidak lengkap";
+    	$data = array(
+			"ID" => "-");
+		
 		$json = array();
 		array_push($json, $data);
 		$response["DATA"] = $json;
 		die(json_encode($response));
-    } else  {
-        $result = mysqli_query($con,"SELECT * FROM tb_berita ");
+		
+	} else {
+		$result = mysqli_query($con,"SELECT * FROM tb_berita WHERE id='$id'");
 			$response["CODE"] = "100";
 			$response["DESC"] = "-";
     		$response["DATA"] = array();
@@ -37,6 +39,5 @@
 			} echo json_encode($response);
 		
 		
-    	mysqli_close($con);        
-    } 
-?>
+    	mysqli_close($con);  
+	}
