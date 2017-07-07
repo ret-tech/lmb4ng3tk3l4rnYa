@@ -4,6 +4,10 @@ include 'db_config.php';
 	$value = json_decode(file_get_contents('php://input'),true);
 	$id = $value["id"];
 	$getGambar = $value["gambar"];
+	$file = $value["gambar"]; 
+	$img = str_replace('data:image/jpg;base64,', '', $file);
+	file_put_contents('img/imag.jpg', base64_decode($img));
+	
 	$judul = $value["judul"];
 	$deskripsi = $value["deskripsi"];
 	$tag = $value["tag"];
