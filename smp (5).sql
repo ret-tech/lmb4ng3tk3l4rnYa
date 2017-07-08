@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08 Jul 2017 pada 19.52
+-- Generation Time: 08 Jul 2017 pada 20.10
 -- Versi Server: 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -119,7 +119,7 @@ CREATE TABLE `tb_users` (
 --
 
 INSERT INTO `tb_users` (`id_user`, `username`, `nama`, `email`, `alamat`, `password`, `last_login`) VALUES
-('123', 'admin', 'Administrator', 'admin@smpn2.sch.id', 'Sungai Penuh', '9001e0835d73b4df72e4267c4e83eb38c3dbb6ef', '2017-07-08 07:42:15');
+('123', 'admin', 'Administrator', 'admin@smpn2.sch.id', 'Sungai Penuh', '2cdeeeab881abadfcd836da01909eb2b8ecae225', '2017-07-08 07:42:15');
 
 --
 -- Indexes for dumped tables
