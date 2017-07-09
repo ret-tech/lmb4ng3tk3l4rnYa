@@ -26,8 +26,8 @@
         		$data["ID_PENGUMUMAN"] = $row["id_pengumuman"];
         		$data["JUDUL"] = $row["judul"];
         		$data["ISI"] = $row["isi"];
-        		$data["DARI"] = $row["dari"];
-        		$data["SAMPAI"] = $row["sampai"];
+        		$data["DARI"] = date("d M Y", strtotime($row["dari"]));
+        		$data["SAMPAI"] = date("d M Y", strtotime($row["sampai"]));
         		
         		array_push($response["DATA"], $data);
 			} echo json_encode($response);

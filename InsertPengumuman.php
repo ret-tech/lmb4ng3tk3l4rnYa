@@ -5,8 +5,8 @@ include 'db_config.php';
 	$id_pengumuman = $value["id_pengumuman"];
 	$judul = $value["judul"];
     $isi = $value["isi"];
-	$dari = date("Y-m-d h:i:s");
-	$sampai = date("Y-m-d h:i:s");
+	$dari = $value["dari"];
+	$sampai = $value["sampai"];
 	if ($judul===null or $isi===null ){
 		$response["CODE"] = (string) 100;
     	$response["DESC"] = "Beberapa parameter tidak diberikan!!";
